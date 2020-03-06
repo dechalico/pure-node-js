@@ -4,20 +4,21 @@ const cli = require('./lib/cli');
 
 const app = {};
 
-app.init = (callback) => {
+foo = 'foo'
+
+app.init = () => {
   
   server.init();
 
   worker.init();
 
-  setTimeout(() => {
-    cli.init();
-    callback();
-  },50);
+  cli.init();
+
+  // setInterval(() => {
+  //   cli.init();
+  // },50);
 };
 
-if(require.main == module){
-  app.init(() => {});
-}
+app.init();
 
 module.exports = app;
