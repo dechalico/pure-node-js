@@ -5,7 +5,7 @@ const cli = require('./lib/cli');
 const app = {};
 
 app.init = (callback) => {
-  
+
   server.init();
 
   worker.init();
